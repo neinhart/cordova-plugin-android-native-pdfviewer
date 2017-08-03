@@ -132,12 +132,13 @@ public class AndroidNativePdfViewer extends CordovaPlugin {
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent){
 
-        String pageNum = intent.getStringExtra(PdfViewActivity.EXTRA_PAGE_NUM);
-
+        // can't find variable, just commenting out 
+        // String pageNum = intent.getStringExtra(PdfViewActivity.EXTRA_PAGE_NUM);
         // at last call sendPluginResult
-        this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, pageNum));
+        // this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, pageNum));
 
         // when there is no direct result form your execute-method use sendPluginResult because most plugins I saw and made recently (Reminder) prefer sendPluginResult to success/error
         // this.callbackContext.success(result.toString());
+        this.callbackContext.success("all is good");
     }
 }
